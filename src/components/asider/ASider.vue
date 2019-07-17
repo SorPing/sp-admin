@@ -4,8 +4,8 @@
       collapsible
       v-model="siderIsCollapsed">
       <div class="user-info">
-        <img src="../../assets/logo.png">
-        <div class="user-name"><span>ADMIN</span></div>
+        <img :src="iconUrl">
+        <div class="user-name"><span>{{userName}}</span></div>
       </div>
       <sider-menu
                :theme="'dark'"
@@ -19,7 +19,9 @@ export default {
   props: {
     menuList: Array,
     theme: String,
-    mode: String
+    mode: String,
+    iconUrl: String,
+    userName: String
   },
   computed: {
     siderIsCollapsed () {

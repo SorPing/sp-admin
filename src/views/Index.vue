@@ -2,7 +2,9 @@
   <a-layout>
     <a-sider :theme="'dark'"
                :mode="'inline'"
-               :menuList="menuList"></a-sider>
+               :menuList="menuList"
+               :userName="'ADMIN'"
+               :iconUrl=iconUrl></a-sider>
     <a-header></a-header>
     <a-layout-content></a-layout-content>
   </a-layout>
@@ -10,9 +12,11 @@
 <script>
 import ASide from '../components/asider/ASider'
 import Header from '../components/header/Header'
+import iconUrl from '../assets/logo.png'
 export default {
   data () {
     return {
+      iconUrl: iconUrl,
       menuList: [
         {
           title: '仪表盘',
