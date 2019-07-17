@@ -5,10 +5,17 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-
+    menuIsCollapsed: false
+  },
+  getters: {
+    menuIsCollapsed (state) {
+      return state.menuIsCollapsed
+    }
   },
   mutations: {
-
+    changeMenuIsCollapsed (state) {
+      state.menuIsCollapsed = !state.menuIsCollapsed
+    }
   },
   actions: {
 

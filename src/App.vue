@@ -3,3 +3,9 @@
     <router-view />
   </div>
 </template>
+<style lang="scss">
+#app {
+  display: flex;
+  height: 100%;
+}
+</style>
