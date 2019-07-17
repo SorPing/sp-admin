@@ -1,8 +1,8 @@
 <template>
   <a-layout-header class="header">
     <a-icon class="trigger"
-            :type="this.menuIsCollapsed ? 'menu-unfold' : 'menu-fold'"
-            @click="changeMenuIsCollapsed" />
+            :type="this.siderIsCollapsed ? 'menu-unfold' : 'menu-fold'"
+            @click="changeSiderIsCollapsed" />
   </a-layout-header>
 </template>
 <script>
@@ -14,14 +14,13 @@ export default {
     }
   },
   methods: {
-    changeMenuIsCollapsed () {
-      console.log(this.menuIsCollapsed)
-      this.$store.commit('changeMenuIsCollapsed')
+    changeSiderIsCollapsed () {
+      this.$store.commit('changeSiderIsCollapsed')
     }
   },
   computed: {
-    menuIsCollapsed () {
-      return this.$store.getters.menuIsCollapsed
+    siderIsCollapsed () {
+      return this.$store.getters.siderIsCollapsed
     }
   }
 }

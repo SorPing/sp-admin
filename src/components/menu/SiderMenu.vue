@@ -9,14 +9,9 @@ export default {
     theme: String,
     mode: String
   },
-  name: 'SideMenu',
+  name: 'SiderMenu',
   data () {
     return {
-    }
-  },
-  computed: {
-    menuIsCollapsed () {
-      return this.$store.getters.menuIsCollapsed
     }
   },
   components: {
@@ -25,7 +20,6 @@ export default {
   methods: {
     createMenuNode (menus) {
       let resultNode = []
-      console.log(menus)
       if (menus !== null && menus !== undefined && menus.length > 0) {
         menus.map(item => {
           if (!item.children) {
@@ -41,7 +35,7 @@ export default {
   },
   render () {
     let menuItem = this.createMenuNode(this.menuList)
-    let menu = <a-layout-sider trigger={null} collapsible v-model={this.menuIsCollapsed}><a-menu theme={this.theme} mode={this.mode}>{menuItem}</a-menu></a-layout-sider>
+    let menu = <a-menu theme={this.theme} mode={this.mode}>{menuItem}</a-menu>
     return (menu)
   }
 }

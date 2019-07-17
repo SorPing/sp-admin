@@ -10,10 +10,6 @@ export default new Router({
       component: () => import('../views/Index')
     },
     {
-      path: '/test',
-      component: () => import('../views/Test')
-    },
-    {
       path: '/404',
       component: () => import('../views/404.vue')
     }

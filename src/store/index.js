@@ -5,16 +5,16 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    menuIsCollapsed: false
+    siderIsCollapsed: false
   },
   getters: {
-    menuIsCollapsed (state) {
-      return state.menuIsCollapsed
+    siderIsCollapsed (state) {
+      return state.siderIsCollapsed
     }
   },
   mutations: {
-    changeMenuIsCollapsed (state) {
-      state.menuIsCollapsed = !state.menuIsCollapsed
+    changeSiderIsCollapsed (state) {
+      state.siderIsCollapsed = !state.siderIsCollapsed
     }
   },
   actions: {

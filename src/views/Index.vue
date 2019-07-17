@@ -1,14 +1,14 @@
 <template>
   <a-layout>
-    <side-menu :theme="'dark'"
+    <a-sider :theme="'dark'"
                :mode="'inline'"
-               :menuList="menuList"></side-menu>
+               :menuList="menuList"></a-sider>
     <a-header></a-header>
     <a-layout-content></a-layout-content>
   </a-layout>
 </template>
 <script>
-import SideMenu from '../components/menu/SideMenu'
+import ASide from '../components/asider/ASider'
 import Header from '../components/header/Header'
 export default {
   data () {
@@ -45,7 +45,7 @@ export default {
     }
   },
   components: {
-    SideMenu,
+    'a-sider': ASide,
     'a-header': Header
   }
 }
